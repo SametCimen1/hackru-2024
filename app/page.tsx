@@ -11,10 +11,16 @@ import {Footer} from "@/components/navigation/footer";
 import Graph from '@/components/Graph'
 import Test from '@/components/Test'
 import PieChart from '@/components/PieChart'
+import HomeFeatureSection from "@/components/HomeFeatureSection";
+import { auth } from "@/server/auth";
+import Dashboard from "@/components/Dashboard";
+
 
 // export const revalidate = 60 * 60;
 
 export default async function Home() {
+  const session = await auth();
+
 
   // const data = await db.query.productVariants.findMany({
   //   with:{
@@ -32,7 +38,7 @@ export default async function Home() {
       <div className="h-[80vh] w-full overflow-hidden">
         <Test></Test>
         {/* <Graph /> */}
-        <PieChart />
+        {session?.user ? <Dashboard /> : <HomeFeatureSection />}
       </div>
     </main>
   );

@@ -61,6 +61,8 @@ export const RoleEnum = pgEnum('roles', ['user', 'admin'])
 
 
 
+
+
   export const emailTokens = pgTable(
     "email_tokens",
     {
@@ -114,6 +116,18 @@ export const products = pgTable('products', {
   created: timestamp("created").defaultNow(),
   price: real('price').notNull()
 })
+
+export const classes = pgTable('classes', {
+  id: serial('id').primaryKey(),
+  courseTitle: text('title'),
+  courseDescription: text('description').notNull(),
+  courseCode: text('code'),
+  courseSyllabus: text('syllabus'),
+  created: timestamp("created").defaultNow()
+})
+
+
+
 
 export const productVariants = pgTable('productVariants', {
   id: serial('id').primaryKey(),

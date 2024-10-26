@@ -127,6 +127,27 @@
       "when": 1717737869693,
       "tag": "0017_glamorous_shooting_star",
       "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1729954654340,
+      "tag": "0018_elite_lester",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1729959190928,
+      "tag": "0019_sticky_rumiko_fujikawa",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1729959232464,
+      "tag": "0020_old_goblin_queen",
+      "breakpoints": true
     }
   ]
 }
